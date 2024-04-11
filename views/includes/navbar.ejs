@@ -1,0 +1,86 @@
+<style>
+    .navbar{
+        width: 100%;
+    }
+    .search-btn{
+        background-color: #fe424d;
+        color: white;
+        border-radius: 25px;
+        padding: 0 1rem 0 1rem;
+    }
+    .search-btn:hover{
+        background-color: #fe424d;
+        color: white;
+    }
+    .search-btn i{
+        display: inline;
+        margin-right: 0.5rem;
+    }
+    .search-input{
+        border-radius: 25px;
+        padding:0.5rem 3rem 0.5rem 3rem;
+    }
+    .navbar-toggler{
+        font-size: 0.8rem;
+    }
+    #navbarNavAltMarkup{
+        background-color:rgb(231, 229, 229);
+        text-align: center;
+        width: 100%;
+    }
+    .navbtn:hover{
+      color: #fe424d !important;
+    }
+    .drop{
+        width: 100%;
+        background-color: rgb(231, 229, 229);
+    }
+    .navbar{
+        background-color: rgb(231, 229, 229);
+    }
+    @media only screen and (max-width:820px){
+        .search-btn{
+        display: none;
+        }
+        .search-input{
+        display: none;
+        }
+
+    } 
+
+</style>
+
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid drop">
+        <a class="navbar-brand" href="/listings"><img src="https://upload.wikimedia.org/wikipedia/en/b/b8/National_Institute_of_Technology%2C_Hamirpur_Logo.png" alt="" class="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+               
+                <a class="nav-link navbtn" href="/listings">Explore problems</a>
+               
+            </div>
+            <div class="navbar-nav ms-auto ">
+                <h3 style="color: #fe424d;"><b>Student Problems Hub</b></h3>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2 search-input" type="search" placeholder="Search destinations" >
+                    <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                </form> -->
+            </div>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link navbtn" href="/listings/new">Register your problem</a>
+                <%if(!currUser){%>
+                    <a class="nav-link navbtn" href="/signup"><b>Sign up</b></a>
+                    <a class="nav-link navbtn" href="/login"><b>Log in</b></a>
+                    <%}%>
+                        <%if(currUser){%>
+                            <a class="nav-link navbtn" href="/logout"><b>Log out</b></a>
+                            <%}%>
+            </div>
+        </div>
+    </div>
+</nav>
